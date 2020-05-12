@@ -19,6 +19,8 @@
   <!-- Custom styles for this template-->
   <link href="{{url('css/admin/sb-admin-2.min.css')}}" rel="stylesheet">
 
+  @yield('css')
+
 </head>
 
 <body id="page-top">
@@ -331,7 +333,7 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">@yield('title-module')</h1>
+                @yield('title-module')
           </div>
 
           @yield('content')
@@ -392,12 +394,9 @@
   <!-- Custom scripts for all pages-->
   <script src="{{url('js/admin/sb-admin-2.min.js')}}"></script>
 
-  <!-- Page level plugins -->
-  <script src="{{url('vendor/chart.js/Chart.min.js')}}"></script>
 
-  <!-- Page level custom scripts -->
-  <script src="{{url('js/admin/demo/chart-area-demo.js')}}"></script>
-  <script src="{{url('js/admin/demo/chart-pie-demo.js')}}"></script>
+
+  @yield('js')
 
 </body>
 

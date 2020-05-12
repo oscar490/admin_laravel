@@ -21,4 +21,14 @@ Route::group(['prefix' => 'admin'], function () {
     
     Route::get('users', 'UserController@listado')
         ->name('users.index');
+
+    Route::get('users/create', 'UserController@create')
+        ->name('users.create');
+
+    Route::post('users/store', 'UserController@store')
+        ->name('users.store');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
